@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ruffle Flash 播放器</title>
+    <style>
+        /* 1. 设置主体样式，使内容垂直居中，并占据整个视口 */
+        body { 
+            display: flex; 
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            min-height: 100vh; /* 确保占据整个视口高度 */
+            margin: 0; /* 移除默认边距 */
+            background-color: #f0f0f0; /* 页面背景色 */
+        }
+        
+        /* 2. 确保嵌入的 Ruffle 播放器不会超出边界 */
+        ruffle-player {
+            display: block; /* 确保它是一个块级元素，方便控制尺寸 */
+        }
+    </style>
+    
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script> 
+</head>
+<body>
+
+    <ruffle-player 
+        data-src="nblox.swf"  width="800"             height="600">            </ruffle-player>
+
+</body>
+</html>
